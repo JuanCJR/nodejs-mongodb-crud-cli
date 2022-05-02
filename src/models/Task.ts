@@ -1,9 +1,5 @@
 import { Schema, model } from "mongoose";
-
-interface Task {
-  title: string;
-  description: string;
-}
+import { Task } from "../interfaces/tasks.interface";
 
 const taskSchema = new Schema<Task>(
   {
@@ -16,4 +12,4 @@ const taskSchema = new Schema<Task>(
   }
 );
 
-export default model('Task', taskSchema);
+export default model("Task", taskSchema);
